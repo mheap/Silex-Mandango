@@ -41,9 +41,9 @@ directory.
 
   Example registration and configuration::
 
-    // add SilexExtension library to the autoloader 
-    $app['autoloader']->registerNamespace('SilexExtension', __DIR__ . '/path/to/silex-extensions');
-    $app->register(new SilexExtension\MandangoExtension(), array(
+    // add SilexMandango library to the autoloader 
+    $app['autoloader']->registerNamespace('SilexMandango', __DIR__ . '/path/to/silex-extensions');
+    $app->register(new SilexMandango\MandangoExtension(), array(
         'mandango.class_path'           => __DIR__ . '/vendor/mandango/src',
         'mandango.token'                => '4dd399ea814c',
         'mandango.cache_dir'            => __DIR__ . '/odm/cache',

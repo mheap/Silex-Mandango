@@ -1,15 +1,21 @@
 {
-    "name": "fate/silex-extensions",
-    "description": "Collection of Extensions for Silex",
-    "keywords": ["silex"],
-    "homepage": "https://github.com/fate/Silex-Extensions",
+    "name": "mheap/silex-mandango",
+    "description": "Mandango extension for Silex",
+    "keywords": ["silex", "mandango", "mongo", "mongodb"],
+    "homepage": "https://github.com/mheap/Silex-Mandango",
     "type": "library",
     "license": "MIT",
+    "version": "dev",
     "authors": [
         {
             "name": "Sven Eisenschmidt",
             "email": "sven.eisenschmidt@gmail.com",
             "homepage": "http://unsicherheitsagent.de/"
+        },
+        {
+            "name": "Michael Heap",
+            "email": "m@michaelheap.com",
+            "homepage": "http://michaelheap.com/"
         }
     ],
     "repositories": [
@@ -59,46 +65,20 @@
                     "mandango/mondator": "*"
                 }
             }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "embedly/embedly-php",
-                "version": "master",
-                "dist": {
-                    "url": "https://github.com/embedly/embedly-php/zipball/fc30b795a97fb79af67cf6c23733a439dd94e8d1",
-                    "type": "zip"
-                },
-                "source": {
-                    "url": "git://github.com/embedly/embedly-php.git",
-                    "type": "git",
-                    "reference": "master"
-                },
-                "autoload": {
-                    "psr-0": {
-                        "Embedly": "src"
-                    }
-                }
-            }
         }
     ],
     "require": {
-        "php": ">=5.3.0"
+        "php": ">=5.3.0",
+        "mandango/mandango": "*"
+        
     },
-    "suggest": {
-        "kriswallsmith/assetic": ">=1.0",
-        "symfony/finder": "2.1.*",
-        "twig/twig": ">=1.2.0",
-        "doctrine/mongodb": "*",
-        "predis/predis": "*",
-        "mandango/mandango": "*",
-        "knplabs/knp-markdown-bundle": "*",
-        "embedly/embedly-php": "*",
-        "fate/gravatar-php": "*"
+    "require-dev": {
+        "silex/silex": "*"
     },
     "autoload": {
         "psr-0": {
-            "SilexExtension": "src"
+            "SilexMemcache": "src"
         }
-    }
+    },
+    "minimum-stability": "dev"
 }

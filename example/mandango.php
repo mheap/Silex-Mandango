@@ -5,8 +5,8 @@ require_once __DIR__ . '/../silex.phar';
 
 $app = new Silex\Application();
         
-$app['autoloader']->registerNamespace('SilexExtension', __DIR__ . '/../src');
-$app->register(new SilexExtension\MandangoExtension(), array(
+$app['autoloader']->registerNamespace('SilexMandango', __DIR__ . '/../src');
+$app->register(new SilexMandango\MandangoExtension(), array(
     'mandango.class_path'           => __DIR__ . '/../vendor/mandango/src',
     'mandango.token'                => '4dd399ea814c',
     'mandango.cache_dir'            => __DIR__ . '/odm/cache',
