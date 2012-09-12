@@ -93,9 +93,6 @@ class MandangoExtension implements ServiceProviderInterface
             $outputDir = rtrim($configuration['default_output'], DIRECTORY_SEPARATOR);
             $outputDir = dirname($outputDir);
 
-            $app['autoloader']->registerNamespace(
-                isset($configuration['model_namespace']) ?
-                    $configuration['model_namespace'] : 'Model', $outputDir);
         }
 
     }
